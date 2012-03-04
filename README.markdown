@@ -19,9 +19,9 @@ Provides functions that convert an element and its children to gray scale. Usefu
 
 ## Notes
 Currently, it searches for the following css properties:
-  - color
-  - background-color
-  - background-image (looking for gradients)
++ color
++ background-color
++ background-image (looking for gradients)
 
 Convertion methods found at <http://www.johndcook.com/blog/2009/08/24/algorithms-convert-color-grayscale/>.
 There's no plans for image processing for now, so it won't gray-scale them.
