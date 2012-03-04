@@ -1,0 +1,14 @@
+{
+  "name": "Gray Scale",
+  "version": "1.1",
+  "background_page": "foo.html",
+  "permissions": [
+    "tabs", "http://*/*"
+  ],
+  "browser_action": {
+      "default_icon": "gray-scale.png",
+      "name": "Click to convert the page to gray scale."
+  },
+  "content_security_policy": "default-src 'self'"
+}
+
