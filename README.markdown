@@ -17,6 +17,8 @@ Provides functions that convert an element and its children to gray scale. Usefu
     /* Check the available methods */
     GrayScale.METHODS;
 
+![luminosity method](/gray-scale-before-after.png "Application of the luminosity method")
+
 ## Notes
 Currently, it doesn't support alpha channel, and it searches for the following css properties:
 
