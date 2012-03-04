@@ -4,25 +4,15 @@ function toGrayScale(element, css_attribute) {
         try {
             var value = compStyle.getPropertyCSSValue(css_attribute).cssText;
             if (value.match(/rgb/) == null) return;
-            if (css_attribute == "background-image") {
-                var colors = value.match(/rgb\((\d+),(?: )(\d+),(?: )(\d+)\)/gi);
-                for (var i = 0; i < colors.length; i++) {
-                    var aux = {}
-                    aux["rgb"] = colors[i];
-                    var components = /rgb\((\d+),(?: )(\d+),(?: )(\d+)\)/i.exec(aux["rgb"]);
-                    aux["r"] = parseFloat(components[1]);
-                    aux["g"] = parseFloat(components[2]);
-                    aux["b"] = parseFloat(components[3]);
-                    colors[i] = aux;
-                }
-            } else {
-                var colors = /rgb\((\d+),(?: )(\d+),(?: )(\d+)\)/i.exec(value);
+            var colors = value.match(/rgb\((\d+),(?: )(\d+),(?: )(\d+)\)/gi);
+            for (var i = 0; i < colors.length; i++) {
                 var aux = {}
-                aux["rgb"] = colors[0];
-                aux["r"] = parseFloat(colors[1]);
-                aux["g"] = parseFloat(colors[2]);
-                aux["b"] = parseFloat(colors[3]);
-                colors = [aux];
+                aux["rgb"] = colors[i];
+                var components = /rgb\((\d+),(?: )(\d+),(?: )(\d+)\)/i.exec(aux["rgb"]);
+                aux["r"] = parseFloat(components[1]);
+                aux["g"] = parseFloat(components[2]);
+                aux["b"] = parseFloat(components[3]);
+                colors[i] = aux;
             }
 
             for (var i = 0; i < colors.length; i++) {
