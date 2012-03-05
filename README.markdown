@@ -25,6 +25,7 @@ Currently, it doesn't support alpha channel, and it searches for the following c
 *   color
 *   background-color
 *   background-image (looking for gradients)
+*   border-color (top, right, bottom and left)
 
 Convertion methods found at <http://www.johndcook.com/blog/2009/08/24/algorithms-convert-color-grayscale/>.
 There's no plans for image processing for now, so it won't gray-scale them.
